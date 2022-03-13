@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { PieChart, Pie, Tooltip} from 'recharts';
+import { PieChart, Pie, Tooltip,ResponsiveContainer} from 'recharts';
 
 const data01 = [
   { name: 'facebook', value: 4000 },
@@ -16,7 +16,8 @@ export default class Example extends PureComponent {
   render() {
     return (
      <div className='center'>
-        <PieChart width={400} height={400}>
+       {/* <ResponsiveContainer width="100%" height="100%"> */}
+        <PieChart width={500} height={500}>
           <Pie
             dataKey="value"
             isAnimationActive={false}
@@ -24,12 +25,13 @@ export default class Example extends PureComponent {
             cx="50%"
             cy="50%"
             outerRadius={80}
-            fill="#8884d8"
+            fill="#eb6434"
             label
           />
          
           <Tooltip />
         </PieChart>
+        {/* </ResponsiveContainer> */}
         </div>
     
     );
